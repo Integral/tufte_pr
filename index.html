@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Tufte</title>
+
+        <meta name="description" content="MATLAB tutorial">
+        <meta name="author" content="Krzysztof Pytka">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        
+        <link href="lib/css/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+        <link rel="stylesheet" href="presentable-master/src/presentable.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="lib/css/video-js.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+         <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+         </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+
+    
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond)-->
+  <script src="js/respond.js"></script>
+    
+
+        <div class="reveal">
+
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			 
+				<section>
+				<section data-background-transition="slide" data-background="assets/main.jpg" style="background: rgba(0,0,0,.6); color: white" id="presentable" class="bookend">
+						<h3 style="color: rgba(255, 255, 255, .9)">Представление информации </h3>
+						<h4 style="color: rgba(255, 255, 255, .9)">Наглядное отображение количественной информации</h4>
+						<p>Эдвард Тафти</p>
+						<small></small>
+						
+					</section>
+				<section>
+        			<h2>Содержание</h2>
+        			<nav id="presentable-toc" class="revealjs"></nav>
+    			</section></section>
+
+<section>
+	<section>
+		<img src="assets/vdqi/2/John_Snow.jpg"><br />
+		<small>John Snow (1813 — 1858)</small>
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graphs.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/map.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graph2.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graphs3.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graphs4.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graphs5.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/aggreg.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/graphs6.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/2/John_Snow_memorial_and_pub.jpg"><br />
+	</section>
+	<section id="ch">
+	</section>
+	<section id="ch-r">
+		<img src="assets/vdqi/3/ch1.jpg" style="max-height:30%;">
+		<img src="assets/vdqi/3/ch2.jpg" style="max-height:30%;" class='fragment'>
+		<img src="assets/vdqi/3/ch3.jpg" style="max-height:20%;" class='fragment'>
+	</section>
+	<section>
+		<img src="assets/vdqi/3/concern.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch4.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch5.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch6.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch7.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch8.jpg"><br />
+	</section>
+	<section>
+		<img src="assets/vdqi/3/ch9.jpg"><br />
+	</section>
+</section>
+<section>
+	<section>
+		<h3>Покидая плоскость</h3>
+	</section>
+
+	<section>
+		<img src="assets/ei/1/toad.jpg"><br />
+		<small>Когда жаба сбрасывает свою кожу во время линьки — ее шкурка покидает наш трехмирный мир и попадает в мир плоскости, как это и происходит с изображаемой информацией.</small>
+		<img src="assets/ei/1/toad_skin.jpg" class='fragment'>
+	</section>
+	<section>
+		<img src="assets/ei/1/chemical_elements_h.jpg">
+		<small>Переодическая таблица элементов</small>
+	</section>
+	<section>
+		<img src="assets/ei/1/point_cloud_3d.jpg"><br />
+		<p><small>Трехмерная диаграмма рассеивания</small></p>
+		<img src="assets/ei/1/point_cloud_hex.jpg" class='fragment'>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<i><p>Не так это просто — прийти к пониманию чего-либо, охватывающего совокупность самых разных процессов и явлений; понять, скажем, природу или — ее искаженное отражение — искусство.</p>
+			<p>И пусть это достаточно сложно — самостоятельно постичь всю суть природы или искусства, но ведь еще сложнее — помочь другому получить такой же всесторонний взгляд.</p>
+			<p>Это связано с тем, что создать в голове ясный и многомерный образ сложного явления мы в состоянии лишь шаг за шагом, постепенно; порой его невозможно описать только лишь словами.</p>
+			<p>В итоге — получается, что мы стеснены в средствах выражения для полноценного описания многосложного объекта и его частей.</p></i>
+			<br />
+			<p style="text-align:right;">Пауль Клее, “О современном искусстве”, Лондон, 1948</p>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/1/orrerie_preview.jpg"><br />
+		<p><small>Уильям Пирсон “Планетарные машины”, Лондон, 1820</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/stereopair.jpg" style="max-height: 85%;">
+		<p><small>Цветное парное стереоизображение Бонадуз, Швейцария, октябрь 1975. Фотографии сделаны камерой Wild Leitz. Масштаб 1:11 000.</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/sunspots_paper.jpg">
+		<p><small>Галилео Галилей “Письма о солнечных пятнах”, Рим, 1613</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/maunder.jpg">
+		<p><small>«Бабочка Маундера»</small></p>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Популяции, которые являются объектом статистического исследования, всегда отражают отклонения в одном или нескольких аспектах. Говоря о статистической науке, как об изучении отклонений, мы подчеркиваем контраст между задачами современных статистиков и их предшественников. До сравнительно недавнего времени, подавляющее большинство статистиков, как мне представляется, не имели иной цели, нежели чем определять совокупности или средние значения. Отклонение само по себе — не было предметом изучения, и обычно расценивалось как помеха, отвлекающая от величины среднего. Кривая <i>нормального распределения</i> была известна уже целое столетие, тогда как <i>стандартное отклонение</i> было объектом исследований вплоть до 1915 года. Тем не менее, с современной точки зрения, изучение причин отклонения любых непостоянных явлений, от урожая пшеницы до интеллекта людей, должно начинаться с исследования и измерения самих отклонений.</p>
+			<br />
+			<p style="text-align:right;">Рональд А. Фишер “Статистические методы для исследователей”, 1925</p>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/1/sunspots_nasa.jpg">
+		<p><small>Диаграмма Маундера с 1880 по 1980 годы, NASA</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/soerabaja_big.jpg" style="max-height: 85%;">
+		<p><small>Расписание движения поездов Сурабая—Джокякарта (ноябрь 1937 года)</small></p>
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/1/soerabaja_big.jpg" style="background: rgba(255,255,255,.8);">
+		<img src="assets/ei/1/soerabaja_description.gif">
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/1/soerabaja_big.jpg" style="background: rgba(255,255,255,.8);">
+		<img src="assets/ei/1/servises_full.jpg">
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/1/soerabaja_big.jpg" style="background: rgba(255,255,255,.8);">
+		<img src="assets/ei/1/train_matrix_2.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/1/dancers.jpg" style="max-height: 85%;">
+		<p><small>Келлом Томлинсон “Искусство танца в текстах и картинках”, Лондон, 1735</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/aomori2.jpeg">
+		<p><small>Рисунки из газеты “Красный флаг”, Токио, 7 марта 1985</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/oxids.jpeg">
+		<p><small>Small multiples / Параллельное изложение / Малые множества</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/gotti_case.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/1/gotti_newspaper.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/1/gotti_table.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/1/aomori.jpg">
+		<p><small>Рисунок из справочника “Метеорологичская карта, 1984″, Токио, 1985</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/tokyo.jpg">
+		<p><small>Рисунок из метеорологического альманаха за 1984 год, Метеорологическое агентство и Метеороголическая ассоциация Японии, Токио, 1984</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/tshirts.jpg">
+		<p><small>Рисунок из книги Юми Такахаши и Икуо Шибукава “Цветовая координация”, Токио, 1985</small></p>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Когда современные архитекторы небезосновательно отказались от использования орнамента на зданиях, они бессознательно стали создавать здания, которые стали орнаментом сами по себе. Яростные сторонники работы с Пространством и противники символизма и орнамента, они драматически исказили все здание, превратив его в “уточку”. Невинная и недорогая практика декорирования была заменена на бесстыдное и дорогостоящее искажение структуры, и в результате на свет появилась “утка”… Самое время переоценить некогда пугающее заявление Джона Раскина о том, что архитектура — это украшение конструкции, но мы также должны помнить о предостережении архитектора Огастеса Пьюджина: можно декорировать конструкцию, но не надо конструировать декорацию.</p>
+			<br />
+			<small style="text-align:right;">Роберт Вентури, Денис Скотт Браун и Стивен Изенур “Уроки Лас-Вегаса”, Кембридж, 1977</small>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/1/duck.jpg">
+		<p><small>Большая Утка, Нью-Йорк, фотография Эдварда Тафти, июль 2000</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/1/diamonds2.jpeg" style="min-height: 98%;">
+	</section>
+</section>
+
+<section>
+	<section data-background-transition="slide" data-background="assets/main.jpg" style="background: rgba(0,0,0,.6); color: white;">
+		<h3 style="color: rgba(255, 255, 255, .9)">Микро/Макро уровни</h3>
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/2/ny-map.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/2/klucis.jpeg">
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/2/copper.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/2/tokio_map.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/2/tokio_map2.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/2/trains.jpeg" style="max-height: 86%;">
+		<p><small>Схема работы линий Токайдо-синкансэн и Саньё-синкансэн на 12:00 25 июня 1985, пункт управления железными дорогами Японии, Токио</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/2/vulkanos.jpeg">
+		<p class='fragment'><small>"Любая отметка сама по себе может нести информацию.<br />Самая простая осмысленная отметка это цифра."</small><br />
+		<small><i>Джон Тукей</i></small></p>
+	</section>
+	<section>
+		<img src="assets/ei/2/rasp.jpeg">
+		<p><small>Кейтин-экспресс на станции Йокогама, 1985</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/2/rasp_s.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/2/garbage.jpeg">
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/2/garbage2.jpeg">
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>“Чем проще форма букв, тем легче читать текст” — эта идея владела умами конструктивистов. Она стала чем-то, вроде догмы, и “модернистские” типографы до сих пор следуют этому.</p>
+			<p>Однако, это утверждение неверно, потому что мы не читаем букв, мы читаем слова, слово целиком, “слово как картинку”. Исследования в области офтальмологии показали, что чем больше буквы отличаются между собой, тем легче читать.</p>
+			<p>Не вдаваясь в сравнительные детали, должно быть понятно, что труднее всего читать текст, набранный заглавными буквами из-за одинаковой высоты, объема, а нередко и ширины букв. Если говорить об антиквах и гротесках, то последние читать сложнее. И модное нынче предпочтение шрифтов без засечек обнаруживает некомпетентность дизайнеров как с точки зрения истории, так и с точки зрения практичности.</p>
+			<br />
+			<p style="text-align:right;">Йозеф Альберс "Взаимодействие цветов", Нью Хэвен, 1975</p>
+		</small>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Меня привлекают сложность и противоречия в архитектуре… Я говорю о сложной и противоречивой архитектуре, основанной на богатстве и неопределенности современной жизни, в том числе присущей искусству. Везде, кроме архитектуры, сложность и противоречия признаны, начиная с изысканий Гёделя в области непротиворечивости в математике и заканчивая анализом Т.С. Элиотом “сложной” поэзии и определения Йозефом Альберсом парадоксальных качеств живописи… Архитекторы не могут больше позволять шантажировать себя пуританской чистотой ортодоксальной модернистской архитектуры… Архитектура сложности и противоречий имеет особый долг по отношению к целому: её правда должна быть в её полноте или в её стремлении к полноте. Она должна воплощать скорее сложное единство составляющих элементов, нежели простое единство исключений… Там, где простота не уместна, результат оказывается простым. Крикливое упрощение опресняет архитектуру. Меньше — значит скучно.</p>
+			<br />
+			<p style="text-align:right;">Роберт Вентури, "Сложности и противоречия в архитектуре"</p>
+		</small>
+	</section>
+</section>
+<section>
+	<section>
+		<h3>Работа со слоями</h3>
+	</section>
+	<section>
+		<img src="assets/ei/3/nadpis.jpeg" style="max-height: 86%;">
+		<p><small>Убоку Нишитани «Koyagire Daiishu», «Техники каллиграфии», 17 том, Токио, 1972</small></p>
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/3/copier.jpeg">
+		<p><small style="background: rgba(255, 255, 255, .6); padding: 10px;position:absolute;top:-340px;left:-200px;width:450px">IBM Series III Copier/Duplicator, Руководство по сборке, Колорадо, 1976</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/3/rasp.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/3/rasp2.jpeg">
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Обычно дизайнеры не любят работать с таблицами, но на самом деле, если подходить к делу вдумчиво, этот процесс может быть очень и очень приятным. Для начала стоит попробовать отказаться от явной сетки вообще. Она допустима только в том случае, если другого выхода нет. Вертикальные отбивки нужны только в таблицах с очень узкими ячейками, где без них цифры легко будет перепутать. Таблицы без вертикальных отбивок выглядят гораздо лучше, чем с ними.</p>
+			<br />
+			<p style="text-align:right;">Ян Чихольд, «Асимметричная типографика», Базель, 1935</p>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/3/map1.gif" style="max-height: 86%;">
+		<p><small>Симла, Индия, карта армии Соединенных Штатов, 1954</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/3/map2.jpeg" style="max-height: 86%;">
+		<p><small>Префектура Токио. Мусашино, парк Уэно, район Курумазака, Токио, 1884</small></p>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Чистые, яркие цвета невыносимы в большом количестве, на больших площадях рядом друг с другом, но в то же время их фрагментарное использование или же комбинация ярких и бледных тонов может давать удивительные эффекты. «Шум это не музыка… красочная тема может родиться только в тишине», говорил Виндиш.</p>
+			<br />
+			<p style="text-align:right;">Эдуард Имхоф «Представление картографического рельефа», Берлин, 1982</p>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/3/ekg.gif">
+		<img src="assets/ei/3/ekg2.jpeg" class='fragment'>
+	</section>
+	<section>
+		<img src="assets/ei/3/forms.jpeg">
+		<p><small>Гаетано Канизца «Контуры без градиентов или когнитивные контуры?», «Итальянский журнал по психологии», №1, апрель 1974</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/3/113.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/3/113_er.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/3/113_contr.gif">
+		<p><small>Иллюстрация из студенческого проекта Джона Вертаймера, Графический дизайн, Йельский университет, 1985 – 1986</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/3/113_rm.gif">
+	</section>
+	<section>
+		<img src="assets/ei/3/instr.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/3/instr_2.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/3/los.jpeg">
+		<p><small>«Басни Эзопа», рисунок Александра Кальдера, Париж, 1931</small></p>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Динамичное взаимодействие объекта и фона было осмыслено четко сформулировано в каждой стройной концепции природы зрительного воспрития, в каждом здоровом понимании трехмерной реальности. Лао-цзы продемонстрировал это, сказав: «Сосуд полезен только до тех пор, пока он пуст. Как и проём в стене, который служит окном. Таким образом, именно отсутствие чего-то в предметах делает их функциональными». В восточной визуальной культуре пустому пространству отводится существенная роль. Китайские и японские живописцы не боятся разделять плоскость изображения на неравные части большими пустотами так, что именно взаимное расположение графики и «воздуха» заставляет взгляд зрителя скользить по поверхности изображения с разной скоростью — таким образом максимально возможными изменениями поверхности создается единство. С уважением относится к пустому пространству и восточная каллиграфия. Иероглифы вписаны в воображаемые квадраты, которым уделено не меньше внимания, чем, собственно, штрихам. Письменная или печатная коммуникация может быть живой или мертвой в зависимости от того, как организовано пустое пространство вокруг. Каждый символ становится ясным и значимым, если только он оказывается на правильном фоне. Чем существеннее разница между символом и его окружением, тем более четким становится понимание этого символа как самостоятельного высказывания.</p>
+			<br />
+			<p style="text-align:right;">Георгий Кепес «Язык зрительного восприятия», Чикаго, 1948</p>
+		</small>
+	</section>
+</section>
+
+<section>
+	<section data-background-transition="slide" data-background="assets/ei/4/fluids.jpg" style="background: rgba(0,0,0,.6); color: white;">
+		<h3 style="color: rgba(255, 255, 255, .9)">Параллельное изложение</h3>
+	</section>
+	<section>
+		<img src="assets/ei/4/saturn.jpg">
+		<p><small>Христиан Гюйгенс “Система Сатурна”, Гаага, 1659</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/trains.jpg">
+	</section>
+	<section data-background-transition="slide" data-background="assets/ei/4/dighton_rock.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/4/dighton_drawings.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/4/ghosts.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/4/china_tang.jpg">
+		<p><small>2625 поэтов эпохи династии Тан</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/china_sung.jpg">
+		<p><small>2377 поэтов эпохи династии Сун</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/china_ming.jpg">
+		<p><small>3005 поэтов эпохи династии Мин</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/china_ching.jpg">
+		<p><small>2079 поэтов эпохи династии Цин</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/china_tang.jpg" style="max-height: 40%;float:left;margin-right:50px;">
+		<img src="assets/ei/4/china_sung.jpg" style="max-height: 40%;float:left" class='fragment'>
+		<img src="assets/ei/4/china_sung.jpg" style="max-height: 40%;float:left;margin-right:50px;" class='fragment'>
+		<img src="assets/ei/4/china_ching.jpg" style="max-height: 40%;float:left" class='fragment'>
+	</section>
+	<section>
+		<img src="assets/ei/4/china_matsu.jpg">
+	</section>
+	<section>
+		<img src="assets/ei/4/rivers_and_mountains.jpg" style="max-height: 85%;">
+		<p><small>Йозеф Хутчинс Колтон “Новый иллюстрированный семейный атлас физических карт Джонсона”, Нью-Йорк, 1864</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/4/neurometric.jpg">
+	</section>
+</section>
+
+<section>
+	<section data-background-transition="slide" data-background="assets/ei/5/map1.jpeg" style="background: rgba(0,0,0,.6); color: white;">
+		<h3 style="color: rgba(255, 255, 255, .9)">Информация и цвет</h3>
+	</section>
+	<section>
+		<img src="assets/ei/5/map1.jpeg" style="max-height: 85%;">
+		<p><small>“Гора Маттерхорн, 1347″, Государственная служба топографии Швейцарии, Ваберн, 1983</small></p>
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Правило первое: несколько больших ярких плашек рядком — это чудовищно. Но если использовать яркие цвета фрагментарно или же комбинировать их с чем-то бледненьким, может получиться очень даже хорошо. “Шум это не музыка. Только пиано делает форте и крещендо возможным, также и яркие штрихи хороши только на бледном фоне”. Сама организация земного пространства подталкивает нас к использованию дизайнерских решений такого рода в картографии. Любые экстремумы, например, наивысшие горные точки или океанские глубины, минимум и максимум температур, как правило занимают очень небольшие области. Ограниченное использование ярких цветов — красота. Большие цветные плашки рядом все только испортят.</small></p>
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Правило второе: использование ярких цветов подряд как правило дает неприятные результаты, особенно, если цвета используются на больших пространствах.</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/5/map2.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/5/theorem.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/5/seasons.jpeg">
+		<p><small>Гретхен Гарнер “Березовая роща”, фотография, 1988</small></p>
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Третье правило: Подложки и большие области цвета стоит делать спокойными, нейтральными, сероватыми, так чтобы на их фоне могли выделяться небольшие яркие области. Именно по этой причине в живописи особенно ценится серый, один из самых симпатичных и самых важных и универсальных цветов. Приглушённые цвета, смешанные с серым — это лучшие фоны в любой цветовой схеме. Все это справедливо и для картографии.</small></p>
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Четвертое правило: Если на картинке больше одного крупного пятна одного цвета, то картинка визуально распадается. Однако, единство можно восстановить, если цвета одной области плавно смешиваются с цветами другой, если цвета связаны, переплетены наподобие ковра. Природа земной поверхности такова, что изобразить её можно только цветными пятнами. Это острова, озёра и реки, низины и возвышенности и т.д. Эти объекты нередко встречаются и на тематических картах, чем усложняют интерпретацию и провоцируют повторы.</small></p>
+	</section>
+	<section>
+		<small style="text-align:left;">
+			<p>Множество цветовых комбинаций предоставляет непаханное поле для вариации смыслов… от малейшего затемнения до сверкающей симфонии цвета. Какие перспективы для работы со смыслами.</p>
+			<br />
+			<p style="text-align:right;">Поль клее “О современном искусстве”, Берн, 1945</p>
+		</small>
+	</section>
+	<section>
+		<img src="assets/ei/5/map3.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/5/map4.jpeg">
+		<p><small>Общая батиметрическая карта океанов, Канада, 1984</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/5/map5.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/5/contures.jpeg">
+	</section>
+	<section>
+		<img src="assets/ei/5/japan.jpeg">
+	</section>
+</section>
+
+<section>
+	<section data-background-transition="slide" data-background="assets/ei/6/pribory.png" style="background: rgba(0,0,0,.6); color: white;">
+		<h3 style="color: rgba(255, 255, 255, .9)">Описание места и времени</h3>
+	</section>
+	<section>
+		<img src="assets/ei/6/avia.png">
+	</section>
+	<section>
+		<img src="assets/ei/6/trains.png">
+	</section>
+	<section>
+		<img src="assets/ei/6/rasp.png">
+	</section>
+	<section>
+		<img src="assets/ei/6/rasp_new.png">
+	</section>
+	<section>
+		<img src="assets/ei/6/playfair.png">
+		<p><small>Уильям Плейфейр “Коммерческий и политический атлас”, Лондон, 1786. Невозможность дефляции денежных единиц ослабляет его аргументацию, особенно в свете послевоенной инфляции.</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/6/rasp_avia.png">
+		<p><small>Расписание самолета, “Визуальная передача информации”, Эдвард Тафти и Инге Друкрей, Нью-Йорк, 1984</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/6/rasp_g.png">
+	</section>
+	<section>
+		<img src="assets/ei/6/rasp_fr.gif">
+		<p><small>Расписание работы швейцарской железной дороги, 22 мая 1932 — 14 мая 1933</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/6/wagner.gif">
+		<p><small>Людвиг Штрекет “Richard Wagner als Verlagsgefahrte“, Манц, 1951</small></p>
+	</section>
+	<section>
+		<img src="assets/ei/6/epilogue.gif">
+		<p><small>Galileo Galilei, Istoria e dimostrazioni intorno alle macchie solari… (Rome, 1613), p. 25</small></p>
+	</section>
+</section>
+	
+<section>
+	<section data-background-transition="slide" data-background="assets/vdqi/subatomic.png" style="background: rgba(0,0,0,.6); color: white;">
+		<h3 style="color: rgba(255, 255, 255, .9)">Графическое совершенство</h3>
+	</section>
+	<section>
+		<p><small>Графическое представление информации должно:</small></p>
+		<ul>
+			<li class='fragment'>отображать данные;</li>
+			<li class='fragment'>заставлять зрителя задумываться о сути графика, а не о его дизайне, способе размещения информации, технологии производства или о чем-нибудь еще;</li>
+			<li class='fragment'>избегать искажения данных;</li>
+			<li class='fragment'>вмещать множество чисел в небольшое пространство;</li>
+			<li class='fragment'>логически упорядочивать большие объемы информации;</li>
+			<li class='fragment'>упрощать для зрителя сравнение различных фрагментов данных;</li>
+			<li class='fragment'>представлять данные на нескольких уровнях детализации, от общего обзора до тонкостей и мелочей;</li>
+			<li class='fragment'>служить достаточно ясной цели: описывать, исследовать, сводить в таблицу или украшать;</li>
+			<li class='fragment'>быть единым целым со статистическим и словесным описанием данных.</li>
+		</ul>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/anscombe.jpg">
+		<p><small>Квартет Энскомба: все четыре группы данных описываются одной и той же линейной моделью</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/anscombe_visual.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/wildshot.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/solar_radiation.jpg">
+		<p><small>Солнечное излучение и цены на акции</small></p>
+		<p><small>A. Цены на акции в Нью-Йорке (среднее значение). B. Солнечное излучение, инвертированное. C. Цены на акции в Лондоне. Всё по месяцам, 1929.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap1.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap2.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap3.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap4.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap5.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cmap6.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/ch_map.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/wmap.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/population.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/napoleon.jpg" style="min-width:120%;">
+	</section>
+</section>
+
+<section>
+	<section>
+		<h3>Чего следует избегать?</h3>
+	</section>
+	<section>
+		<p><small>1. Рисунков, объёмных изображений, массивных элементов диаграмм, несущих исключительно украшательскую функцию.</small></p>
+	</section>
+	<section>
+		<p><small>Основные способы «декорировать данные» во время визуализации:</small></p>
+		<ul>
+			<li class='fragment'>Сместить шкалу (чтобы начиналась не с «0», а например с «-5») и даже минимальный рост будет значительным</li>
+			<li class='fragment'>Исказить визуальный размер объектов</li>
+		</ul>
+	</section>
+	<section>
+		<p><small>Фактор лжи это количественная величина, рассчитывается как отношение «размера эффекта, показанного на графике» к «размеру эффекта в данных».</small></p>
+		<img src="assets/vdqi/1/lie_factor_formel.jpg" style="min-width:100%;" class='fragment'>
+	</section>
+	<section>
+		<p><small>Размер графического эффекта измеряется просто линейкой</small></p>
+		<img src="assets/vdqi/1/lie_factor_formel_size_of_effect.jpg" style="min-width:100%;" class='fragment'>
+	</section>
+	<section>
+		<p><small>Тафти приводит пример, опубликованный в Нью-Йорк Таймс, отчет Транспортного департамента об эффективности своей работы</small></p>
+		<img src="assets/vdqi/1/lie_factor_example1_image.jpg" style="min-width:100%;" class='fragment'>
+	</section>
+	<section>
+		<p><small>На графике: экономия бензина. В 1978 году 1 галлон бензина уходил на 18 миль, в 1985 году этого галлона хватало уже на 27.5 миль.</small></p>
+		<p class='fragment'><small>Итого, за 17 лет экономия составляет (27.5-18) / 18 * 100% = 53%</small></p>
+		<p class='fragment'><small>На графике же пропорция изменений совершенно другая: линия, показывающая 78 год равна 0.6 дюймов, а черта 85 года уже 5.3 дюймов.</small></p>
+		<p class='fragment'><small>Соответственно фактор лжи этого графика просто огромен:</small></p>
+		<img src="assets/vdqi/1/lie_factor_example11.jpg" style="min-width:100%;" class='fragment'>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/barrel.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/houses.jpg" style="min-width:100%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/doctors.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/bars.jpg" style="min-width:100%;">
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Трудно соблюсти правильные пропорции между числами и соответствующими рисунками (ср. фигуры врачей и бочек с числовыми данными). Даже если пропорции соблюдены, психологические исследования показывают, что люди плохо оперируют соотношениями площадей и объёмов изображённых фигур.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/prawda.jpg" style="min-width:100%;">
+	</section>
+	<section>
+		<p><small>2. Представлений данных вне контекста.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/graph1.jpg" style="min-height:80%;">
+		<p><small>Снижение смертности в 1956 году по сравнению с 1955 годом на трассах Коннектикута</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/graph2.jpg" style="min-height:80%;">
+		<p><small>То же в контексте более длинного промежутка времени</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/graph3.jpg" style="min-height:80%;">
+		<p><small>То же в сравнении с показателями соседних территорий</small></p>
+	</section>
+	<section>
+		<p><small>Визуализация — это инструмент анализа данных. Без соответствующего контекста анализ невозможен.</small></p>
+	</section>
+	<section>
+		<p><small>3. Штриховок.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/shtrih1.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/shtrih2.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/shtrih3.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Эффект муара, рябь в глазах, затрудняющая анализ.<br /><br />Проблему предлагается решать не с помощью цветов (даже если это возможно технически), а упрощением самой графики.</small></p>
+	</section>
+	<section>
+		<p><small>4. Украшательств ради украшательств, цветов ради цветов.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cvet.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Причины очевидны. Таблица — тоже инструмент визуализации. Не все данные нужно представлять графически. (Также аргументируется, что авторы склонны излишне упрощать графику: скажем, приведённая выше гистограмма с бочками может иллюстрировать сложный экономический текст, требующий известного образовательного уровня для восприятия. Сложность графики должна соответствовать сложности остального текста).</small></p>
+	</section>
+	<section>
+		<p><small>5. Цветового кодирования.</small></p>
+		
+	</section>
+	<section>
+		<img src="assets/vdqi/1/cvet_kod.jpg" style="min-height:100%;">
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Цветовая шкала плохо воспринимается. Читатель вынужден постоянно возвращаться к «легенде». Утверждается, что даже цветовые переходы в виде радуги плохо интерпретируются. Единственный легко улавливаемый индикатор — насыщенность (т.е., например, оттенки серого допустимы).</small></p>
+	</section>
+	<section>
+		<p><small>6. Круговых диаграмм.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/round.png" style="min-height:100%;">
+	</section>
+	<section>
+		<p style="text-align:left;"><small>Доказано, что люди плохо воспринимают количественные соотношения между секторами круга. Если данные сложны, анализ с помощью круговой диаграммы невозможен. Если данные просты, лучше привести их в таблице.</small></p>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h3>Методы улучшения визуализаций</h3>
+	</section>
+	<section>
+		<p><small>1. Вынесение численной информации в графику.</small></p>
+		<p style="text-align:left;" class='fragment'><small>Если численная информация (географическое расположение, транспортный поток, точка на объекте) может быть отображена на рисунке, имеет смысл сделать это.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/wmap.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/population.jpg">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/napoleon.jpg" style="min-width:120%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/melanoma.jpg">
+	</section>
+	<section>
+		<p><small>2. Увеличение data-to-ink ratio.</small></p>
+		<p style="text-align:left;" class='fragment'><small>От элементов, не несущих смысловой нагрузки, следует избавляться, тем самым облегчая рисунок.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/atomic.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/atomic2.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Цель - показ периодической зависимости атомного объёма от атомного числа. На переработанном рисунке исключены элементы, не соответствующие цели, также добавлены пояснения для атомов «на краях» и для атомов, не вписывающихся в общую картину.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/sound.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/sound2.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Цель - показ того, что в каждом наборе из двух столбцов левый столбец всегда оказывается выше; длина вертикального штриха, пересекающего столбец, также имеет значение. В переработанном варианте сохраняются только значащие элементы.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/01.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/02.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/03.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/04.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/05.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/06.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/07.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/08.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/10.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/11.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/13.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/14.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/15.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/16.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/17.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/18.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/19.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/20.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/21.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/22.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/23.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/24.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/25.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/27.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/28.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/29.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/31.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/32.png" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/32.png" style="max-width:50%;">
+		<img src="assets/vdqi/1/01.png" style="max-width:50%;">
+	</section>
+	<section>
+		<p><small>3. Редизайн существующих стандартных элементов диаграмм.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/tjuki.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>«Диаграмма Тьюки». Пунктирная линия отображает некоторый диапазон. Границы прямоугольника обозначают первую и третью квартили диапазона, горизонтальная линия внутри прямоугольника — медиану диапазона.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/tjukin.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/gisto.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Обычная гистограмма. Удалена «коробка»; штрихи, ранее обозначенные на оси ординат, выделены с помощью самих столбцов.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/giston.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/tjukiw.jpg" style="min-height:80%;">
+		<p class='fragment'><small>Диаграмма Тьюки с переменной шириной прямоугольника.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/tjukiwn.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/graph_re.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Обычный график с выделенными границами диапазона. Линия оси ординат покрывает лишь фактически присутствующую на графике часть диапазона (тем самым визуализируя минимум и максимум значений).</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/scatterplot.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Диаграмма разброса (scatterplot). На обеих осях с помощью смещённой линии выделены квартили и медиана. Вместо смещённой линии можно использовать утолщение. Также оси покрывают лишь участок диаграммы от минимума до максимума.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/scatterplot_re.jpg" style="min-height:80%;">
+	</section>
+	<section>
+		<img src="assets/vdqi/1/dot-d-pl.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Dot-dash-plot: вариант диаграммы разброса с возможностью анализа распределения величин по каждой из осей.</small></p>
+	</section>
+	<section>
+		<p><small>4. Использование данных в качестве элементов оформления</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/number_graph.jpg" style="min-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>График, в котором подписи данных заменяют оси абсцисс и ординат. Отображены лишь реально встретившиеся в графике величины.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/france.jpg" style="max-height:80%;">
+		<p style="text-align:left;" class='fragment'><small>Американские дивизии во Франции во время первой мировой войны. График показывает количество дивизий во Франции в каждый месяц между июнем 1917 и октябрем 1918, какие именно были дивизии во Франции каждый месяц и время пребывания каждой дивизии во Франции.</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/japan_b.jpg" style="min-height:80%;">
+		<p><small>Жизненный цикл японского жука</small></p>
+	</section>
+	<section>
+		<img src="assets/vdqi/1/fear.jpg" style="max-height:90%;">
+		<p><small>Мимика животного в зависимости от ситуации</small></p>
+	</section>
+	<section>
+		<p><small>В целом идеи Тафти сводятся к достаточно простым рекомендациям:</small></p>
+		<ul>
+			<li class='fragment'>не заниматься визуализацией тривиальных данных;</li>
+			<li class='fragment'>избавляться от элементов, несущих только декоративную функцию;</li>
+			<li class='fragment'>избавляться от элементов, затрудняющих анализ данных;</li>
+			<li class='fragment'>максимизировать data-to-ink ratio;</li>
+			<li class='fragment'>по возможности превращать элементы оформления (оси, точки) в элементы данных;</li>
+			<li class='fragment'>по возможности использовать элементы данных в качестве элементов оформления;</li>
+			<li class='fragment'>в рисунках по возможности отображать численные данные в графическом виде.</li>
+		</ul>
+	</section>
+</section>
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+				<aside id="presentable-icon" class="revealjs">
+    <a title="Table of Contents" href="index.html#/0/1">
+         <i class="fa fa-list-ul fa-2x" style='color:  rgba(255,255,255,.6)'></i>
+    </a>
+    
+</aside>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="lib/js/jquery.min.js"></script>
+		<script src="lib/js/jquery-ui.min.js"></script>
+		<script src="lib/js/video.js"></script>
+		<script src="lib/js/bigvideo.js"></script>
+				<script>
+/*$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show('lib/js/ch.mp4');
+});*/
+Reveal.addEventListener( 'slidechanged', function( event ) { 
+	if (event.currentSlide.id == 'ch') {
+		$(function() {
+    		var BV = window.BV = new $.BigVideo();
+    		BV.init();
+    		BV.show('lib/js/ch2.ogg');
+		});
+	} else if (event.currentSlide.id == 'ch-r') {
+		window.BV.remove();
+	}
+})
+</script> 
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				rollingLinks: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/js/classList.js' },
+					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/presentable/presentable.js', callback: function() { presentable.toc({framework: "revealjs"});}} 
+					]
+			});
+
+		</script>
+
+
+	</body>
+</html>
